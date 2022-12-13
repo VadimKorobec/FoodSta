@@ -1,0 +1,54 @@
+<div class="backdrop-order backdrop--hidden" data-modal>
+  <div class="order-modal">
+    <button class="order-modal__btn" type="button" data-modal-close>
+      <svg class="order-modal__icon" width="11" height="11">
+        <use href="./images/icons.svg#burg-close"></use>
+      </svg>
+    </button>
+    <form class="order-form">
+      <strong class="order-form__title">Order form</strong>
+      <div class="order-form__group" role="group">
+        <label class="order-form__wrap">
+          <span class="order-form__label">Name</span>
+          <input class="order-form__input" type="text" name="user-name" required placeholder="Your name"
+            minlength="3" />
+
+          <span class="modal-form-error">
+            <svg class="modal-form-icon" width="12" height="12">
+              <use class="warning-icon" href="./images/icons.svg#input"></use>
+            </svg>The name must be between 3 and 25 characters</span>
+        </label>
+        <label class="order-form__wrap">
+          <span class="order-form__label">Phone number</span>
+          <input class="order-form__input" type="tel" name="user-phone" required
+            placeholder="+38(0_ _) _ _ _   _ _   _ _" minlength="12" />
+
+          <span class="modal-form-error">
+            <svg class="modal-form-icon" width="12" height="12">
+              <use class="warning-icon" href="./images/icons.svg#input"></use>
+            </svg>
+            This phone must be in the format 099 000 00 00</span>
+        </label>
+        <label class="order-form__wrap">
+          <span class="order-form__label">E-mail</span>
+          <input class="order-form__input" type="email" name="E-mail" required placeholder="example@gmail.com" />
+          <span class="modal-form-error">
+            <svg class="modal-form-icon" width="12" height="12">
+              <use class="warning-icon" href="./images/icons.svg#input"></use>
+            </svg>
+            Please enter a valid email address</span>
+        </label>
+        <label class="order-form__agreement">
+          <input class="order-checkbox visually-hidden" type="checkbox" name="user-rules" value="rules">
+          <svg class="order-checkbox__icon" width="16" height="15">
+            <use class="order-icon__uncheck" href="./images/icons.svg#uncheck"></use>
+            <use class="order-icon__check" href="./images/icons.svg#check"></use>
+          </svg><span class="order-checkbox__text">By subscribing you agree to with our
+            <a href="" class="order-checkbox__link" target="_blank">Privacy Policy</a>
+          </span>
+        </label>
+      </div>
+      <button class="order-btn" type="submit">Send</button>
+    </form>
+  </div>
+</div>
