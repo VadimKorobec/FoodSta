@@ -1,0 +1,64 @@
+<section class="offerings offerings__overlay" id="service">
+  <div class="offerings__container">
+    <picture>
+      <!-- desctop -->
+      <source media="(min-width: 1280px)" srcset="
+      ./images/offerings/apples/des-550.webp 1x,
+      ./images/offerings/apples/des-1100.webp 2x" type="image/webp" />
+      <source media="(min-width: 1280px)" srcset="
+      ./images/offerings/apples/des-550.png 1x,
+      ./images/offerings/apples/des-1100.png 2x" type="image/png" />
+      <!-- tablet -->
+      <source media="(min-width: 768px)" srcset="
+           ./images/offerings/apples/tab-704.webp 1x,
+            ./images/offerings/apples/tab-1408.webp 2x" type="image/webp" />
+      <source media="(min-width: 768px)" srcset="
+            ./images/offerings/apples/tab-704.png 1x,
+            ./images/offerings/apples/tab-1408.png 2x" type="image/png" />
+      <!-- mobile -->
+      <source media="(max-width: 767px)" srcset="
+                ./images/offerings/apples/mob-280.webp 1x,
+                  ./images/offerings/apples/mob-560.webp 2x" type="image/webp" />
+      <source media="(max-width: 767px)" srcset="
+                  ./images/offerings/apples/mob-280.png 1x,
+                  ./images/offerings/apples/mob-560.png 2x" type="image/png" />
+      <!-- fallback -->
+      <img class="offerings__img" src="./images/offerings/apples/mob-280.png" alt="apple">
+    </picture>
+
+    <div class="container__desktop--right">
+      <h2 class="offerings__titel">
+        What’s Special About Our Offerings
+      </h2>
+      <p class="offerings__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <ul class="offerings__wrap">
+        <li class="offerings__box">
+          <h3 class="offerings__box--titel">Fasest Delivery</h3>
+          <p class="offerings__box--text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse varius enim in eros.
+          </p>
+        </li>
+        <li class="offerings__box offerings__box--before">
+          <h3 class="offerings__box--titel">Easy To Order</h3>
+          <p class="offerings__box--text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse varius enim in eros.
+          </p>
+        </li>
+      </ul>
+      <div class="container__link">
+        <button class="offerings__btn" type="button">OrderNow</button>
+        <a class="offerings__link" href="">Read More
+          <svg class="offerings__link--icon" width="14" height="14">
+            <use href="/src/images/icons.svg#chevron-down"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
