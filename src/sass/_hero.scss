@@ -1,0 +1,218 @@
+.hero {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}
+
+.hero__container {
+    @extend %container;
+
+    @media screen and (min-width: 768px) {
+        position: relative;
+    }
+
+    @media screen and (min-width: 1280px) {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.hero__wrap {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 440px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 537px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        max-width: 502px;
+    }
+}
+
+.hero__wrap-title {
+    margin-bottom: 28px;
+    font-weight: 700;
+    color: var(--main-txt-color);
+    font-size: 28px;
+    line-height: calc(33 / 28);
+
+    display: block;
+    animation: move 1800ms linear 100ms 1 both;
+
+    @media screen and (min-width: 768px) {
+        font-size: 42px;
+        line-height: calc(50 / 42);
+        margin-bottom: 44px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 48px;
+        line-height: calc(58 / 48);
+    }
+}
+
+.hero__wrap-text {
+    margin-bottom: 28px;
+
+    color: var(--main-txt-color);
+    font-size: 14px;
+    line-height: calc(21 / 14);
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: calc(24 / 16);
+        width: 336px;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+        line-height: calc(24 / 16);
+        width: 502px;
+    }
+}
+
+.hero__wrap-btn {
+    display: inline-block;
+    font-family: inherit;
+    color: var(--main-txt-color);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: calc(20 / 13);
+    cursor: pointer;
+    background-color: var(--accent-bg-color);
+    border: none;
+    border-radius: 30px;
+    padding: 6px 18px;
+    width: 98px;
+    white-space: nowrap;
+
+    transition: var(--animation-hv-fcs);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #b5ff00;
+    }
+}
+
+.hero__img {
+    max-width: 292px;
+    height: 292px;
+    width: 100%;
+
+    @media screen and (min-width: 1280px) {
+        max-width: 528px;
+        height: 528px;
+    }
+}
+
+
+.slider {
+    display: none;
+    z-index: 0;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 89px;
+        right: 32px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
+
+.swiper {
+    max-width: 320px;
+    max-height: 320px;
+
+    border: 14px solid #ffe550;
+    border-radius: 50%;
+
+    @media screen and (min-width: 1280px) {
+        max-width: 580px;
+        max-height: 580px;
+
+        border: 26px solid #ffe550;
+        border-radius: 50%;
+    }
+}
+
+.slider__btn {
+    color: var(--main-txt-color);
+    position: absolute;
+    background-color: #ffffff;
+    border-color: transparent;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    height: 28px;
+    width: 34px;
+
+
+    &:hover,
+    &:focus {
+        color: #7eb101;
+    }
+
+    &:active {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 48px;
+        height: 40px;
+        border-radius: 8px;
+    }
+}
+
+.swiper-button-prev {
+    top: 50%;
+    left: -8px;
+
+    @media screen and (min-width: 1280px) {
+        left: -14px;
+    }
+}
+
+.swiper-button-prev::after {
+    --swiper-navigation-size: 20px;
+
+    @media screen and (min-width: 1280px) {
+        --swiper-navigation-size: 29px;
+    }
+}
+
+.swiper-button-next {
+    top: 50%;
+    right: -8px;
+
+    @media screen and (min-width: 1280px) {
+        right: -14px;
+    }
+}
+
+.swiper-button-next::after {
+    --swiper-navigation-size: 20px;
+
+    @media screen and (min-width: 1280px) {
+        --swiper-navigation-size: 29px;
+    }
+}
+
+svg.slider__icon {
+    display: none;
+}
