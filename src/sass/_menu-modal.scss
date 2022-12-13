@@ -1,0 +1,218 @@
+.backdrop-order {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(94, 99, 99, 0.7);
+  overflow-y: scroll;
+  transition: opacity var(--animation-hv-fcs), visibility var(--animation-hv-fcs);
+}
+
+.backdrop-order.backdrop--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.order-modal {
+  position: relative;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px 20px;
+
+  width: 320px;
+  min-height: 449px;
+  background-color: #ffe550;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  opacity: 1;
+
+  @media screen and (min-width: 768px) {
+    width: 458px;
+  }
+
+  &__btn {
+    position: absolute;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: transparent;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+  }
+
+  &__icon {
+    fill: #2c2c2c;
+  }
+}
+
+.backdrop-order.is-hidden .order-modal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.order-form {
+  text-align: center;
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29 / 24);
+    color: #2c2c2c;
+  }
+
+  &__label {
+    display: block;
+    text-align: left;
+    margin-bottom: 2px;
+    padding-left: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(22 / 16);
+    color: #2c2c2c;
+  }
+
+  &__input {
+    display: block;
+    padding-left: 12px;
+    width: 100%;
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid #7eb101;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    margin-bottom: 24px;
+    outline: transparent;
+
+    &:valid:not(:placeholder-shown) {
+      border-color: #7eb101;
+    }
+
+    &:invalid:required:not(:placeholder-shown) {
+      border-color: #ff705d;
+    }
+
+    &:invalid:not(:placeholder-shown)~.modal-form-error {
+      opacity: 1;
+    }
+
+    &::placeholder {
+      border-color: #7eb101;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: calc(20 / 16);
+      color: #c4c4c4;
+    }
+  }
+}
+
+.order-btn {
+  width: 106px;
+  padding: 10px 38px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: calc(20 / 13);
+  color: #2c2c2c;
+  background: #ffffff;
+  border: 2px solid #7eb101;
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  transition: 400ms;
+
+  &:hover,
+  :focus {
+    background: #bbf330;
+    border: 2px solid #7eb101;
+  }
+}
+
+.privacy__link--modal {
+  margin-bottom: 8px;
+}
+
+.order-form__wrap {
+  position: relative;
+}
+
+.modal-form-icon {
+  fill: #ff705d;
+}
+
+.modal-form-error {
+  position: absolute;
+
+  top: 75px;
+  left: -198px;
+  opacity: 0;
+
+  font-family: var(--main-font);
+  font-size: 10px;
+  line-height: calc(15 / 10);
+  color: #ff705d;
+
+  transition: 400ms;
+}
+
+.order-form__agreement {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-checkbox:checked+.order-checkbox__icon .order-icon__uncheck {
+  opacity: 0;
+  transition: opacity var(--animation-hv-fcs);
+}
+
+.order-checkbox__icon {
+  margin-right: 8px;
+  transition: background-color var(--animation-hv-fcs);
+
+  .order-checkbox:checked+& {
+    background-color: #7eb101;
+  }
+}
+
+.order-icon__check {
+  opacity: 0;
+  fill: #ffffff;
+  transition: opacity var(--animation-hv-fcs);
+
+  .order-checkbox:checked+.order-checkbox__icon & {
+    opacity: 1;
+  }
+}
+
+.order-checkbox:checked .order-checkbox__icon {
+  background-color: #7eb101;
+}
+
+.order-checkbox__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+  user-select: none;
+}
+
+.order-checkbox__link {
+  color: #7eb101;
+  text-decoration: underline;
+}
