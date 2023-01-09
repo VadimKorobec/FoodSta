@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https:/VadimKorobec/command-project-06",
+  "homepage": "https:/VadimKorobec/FoodSta",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /command-project-06/"
+    "build": "parcel build src/*.html --public-url /FoodSta/"
   },
   "repository": {
     "type": "git",
